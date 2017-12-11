@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
-public class merge_sortiranih_arrays 
+public class Merge_sorted_arrays 
 {	
-	// Spaja dva niza oba sortirana u rastucem poretku
-	public static int[] spoj_nizove(int[] a, int[] b)
+	// Merging of the two arrays both sorted in ascending order
+	public static int[] merge_arrays(int[] a, int[] b)
 	{		
 		int a_last_index = a.length - 1;
 		int b_last_index = b.length - 1;
@@ -18,8 +18,8 @@ public class merge_sortiranih_arrays
 		return a;
 	}
 	
-	// Spaja dva niza prvi sortiran u rastucem poretku a drugi u opadajucem
-	public static int[] spoj_nizove2(int[] a, int[] b)
+	// Merging of the two arrays. First sorted in the ascending order and the other sorted in the descending order
+	public static int[] merge_arrays_2(int[] a, int[] b)
 	{
 		int a_last_index = a.length - 1;
 		int b_start = 0;
@@ -35,8 +35,8 @@ public class merge_sortiranih_arrays
 		return a;
 	}
 	
-	// Spaja dva niza oba sortirana u opadajucem poretku
-	public static int[] spoj_nizove3(int[] a, int[] b)
+	// Merging of the two arrays both sorted in descending order
+	public static int[] merge_arrays_3(int[] a, int[] b)
 	{
 		int a_start = 0;
 		int b_start = 0;
@@ -64,8 +64,8 @@ public class merge_sortiranih_arrays
 			
 	}
 		
-	// Spaja dva niza prvi sortiran u opadajucem poretku a drugi u rastucem
-	public static int[] spoj_nizove4(int[] a, int[] b)
+	// Merging of the two arrays. First sorted in the descending order and the other sorted in the ascending order
+	public static int[] merge_arrays_4(int[] a, int[] b)
         {
 		a = Arrays.copyOf(a, ( 2 * a.length ) + b.length);
 		int a_start = 0;
@@ -112,7 +112,7 @@ public class merge_sortiranih_arrays
 		for(int broj : b)
 		   System.out.print(broj + " ");
 		
-		a = spoj_nizove(a, b);
+		a = merge_arrays(a, b);
 	    
 	        System.out.println();
 		System.out.println();
@@ -137,7 +137,7 @@ public class merge_sortiranih_arrays
 		for(int broj : b1)
 		   System.out.print(broj + " ");
 	
-	        a1 =spoj_nizove2(a1, b1);
+	        a1 = merge_arrays_2(a1, b1);
 	    
 	        System.out.println();
 		System.out.println();
@@ -164,7 +164,7 @@ public class merge_sortiranih_arrays
 		
 		System.out.println();
 	
-		a2 = spoj_nizove3(a2, b2);
+		a2 = merge_arrays_3(a2, b2);
 	    
 	        System.out.println();
 
@@ -190,7 +190,7 @@ public class merge_sortiranih_arrays
 		
 		System.out.println();
 		
-	        a3 = spoj_nizove4(a3, b3);
+	        a3 = merge_arrays_4(a3, b3);
 	    
 	        System.out.println();
 
